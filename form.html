@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de contacto</title>
+  </head>
+  <body>
+    <h1>Formulario de contacto</h1>
+
+    <form action="#">
+      <label for="nombre">Nombre completo:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingrese su nombre completo"
+        required
+      />
+
+      <label for="email">Correo electrónico:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ingrese su correo electrónico"
+        required
+      />
+
+      <label for="asunto">Asunto:</label>
+      <select id="asunto" name="asunto" required>
+        <option value="consulta">Consulta</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="reclamo">Reclamo</option>
+      </select>
+
+      <label for="tipo_contacto">Tipo de contacto:</label>
+      <div>
+        <input
+          type="radio"
+          id="tipo_contacto_1"
+          name="tipo_contacto"
+          value="telefonico"
+          checked
+        />
+        <label for="tipo_contacto_1">Telefónico</label>
+
+        <input
+          type="radio"
+          id="tipo_contacto_2"
+          name="tipo_contacto"
+          value="email"
+        />
+        <label for="tipo_contacto_2">Correo electrónico</label>
+      </div>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="5"
+        placeholder="Ingrese su mensaje"
+        required
+      ></textarea>
+
+      <div class="botones">
+        <button type="submit">Enviar</button>
+        <button type="button" onclick="window.location.href='index.html'">
+          Cancelar
+        </button>
+        <button type="reset">Limpiar formulario</button>
+      </div>
+    </form>
+  </body>
+</html>
